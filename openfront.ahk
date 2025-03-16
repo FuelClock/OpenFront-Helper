@@ -53,7 +53,7 @@ Numpad1::
 return
 
 ;Boat Menu
-q::
+$q::
 	KeyWait, q
 	BlockInput, mousemove
     MouseGetPos, mouseX, mouseY
@@ -76,7 +76,7 @@ q::
 	return
 
 ;Build City
-c::
+$c::
     KeyWait, c
 	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
@@ -84,7 +84,9 @@ c::
 	ogmouseY := mouseY
 	SendInput, {CTRL Down}
 	Sleep, 50
-	Click
+	SendEvent, {Lbutton Down}
+	rsleep(50, 50, 60)
+	SendEvent, {Lbutton up}
 	Sleep, 50
 	Sendinput, {CTRL Up}
 	Sleep, 300
@@ -100,7 +102,7 @@ c::
 	return
 
 ;Build Port
-t::
+$t::
     KeyWait, t
 	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
@@ -124,7 +126,7 @@ t::
 	return
 
 ;Build Silo
-r::
+$r::
     KeyWait, r
 	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
