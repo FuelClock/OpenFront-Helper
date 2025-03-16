@@ -15,6 +15,7 @@ rsleep(minSleep, targetSleep, maxSleep) {
 
 attack10() {
 	KeyWait, 1
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -26,10 +27,12 @@ attack10() {
 	Click
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 }
 
 attack20() {
 	KeyWait, 2
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -41,10 +44,12 @@ attack20() {
 	Click
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 }
 
 attack30() {
 	KeyWait, 3
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -56,10 +61,12 @@ attack30() {
 	Click
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 }
 
 attack40() {
 	KeyWait, 4
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -71,10 +78,12 @@ attack40() {
 	Click
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 }
 
 attack50() {
 	KeyWait, 5
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -86,10 +95,12 @@ attack50() {
 	Click
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 }
 
 attack60() {
 	KeyWait, 6
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -101,10 +112,12 @@ attack60() {
 	Click
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 }
 
 attack70() {
 	KeyWait, 7
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -116,4 +129,5 @@ attack70() {
 	Click
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 }

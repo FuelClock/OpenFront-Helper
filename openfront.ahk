@@ -84,7 +84,7 @@ c::
 	Click
 	Sleep, 50
 	Sendinput, {CTRL Up}
-	Sleep, 250
+	Sleep, 300
 	;Click buy city
 	MouseMove, 1020, 650, 0
 	sleep, 50
