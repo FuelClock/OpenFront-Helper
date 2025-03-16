@@ -84,12 +84,10 @@ $c::
 	ogmouseY := mouseY
 	SendInput, {CTRL Down}
 	Sleep, 50
-	SendEvent, {Lbutton Down}
-	rsleep(50, 50, 60)
-	SendEvent, {Lbutton up}
+	click	
 	Sleep, 50
 	Sendinput, {CTRL Up}
-	Sleep, 300
+	Sleep, 250
 	;Click buy city
 	MouseMove, 1020, 650, 0
 	sleep, 50
