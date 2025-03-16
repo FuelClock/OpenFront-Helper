@@ -1,18 +1,41 @@
 #SingleInstance, Force
+#Requires AutoHotkey v1.1
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #MaxThreadsPerHotkey, 2
 
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetKeyDelay, 25, 25
 SendMode, Event
-CoordMode, Mouse
+CoordMode, window
 
 Toggle := False
 #Include, functions.ahk
 return
 
-/::suspend
-; Turns your autofire on or off
+;10% Attack strength
+$1::
+	attack10()
+	return
+
+;20% Attack strength
+$2::
+	attack20()
+	return
+$3::
+	attack30()
+	return
+$4::
+	attack40()
+	return
+$5::
+	attack50()
+	return
+$6::
+	attack60()
+	return
+$7::
+	attack70()
+	return
 
 ;Build Menu
 Numpad1::
@@ -30,7 +53,9 @@ Numpad1::
 return
 
 ;Boat Menu
-q::
+$q::
+	KeyWait, q
+	BlockInput, mousemove
     MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -47,17 +72,19 @@ q::
 	SendInput, {ESC}
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 	return
 
 ;Build City
-c::
+$c::
     KeyWait, c
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
 	SendInput, {CTRL Down}
 	Sleep, 50
-	Click
+	click	
 	Sleep, 50
 	Sendinput, {CTRL Up}
 	Sleep, 250
@@ -69,11 +96,13 @@ c::
 	SendInput, {ESC}
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 	return
 
 ;Build Port
-t::
+$t::
     KeyWait, t
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -91,11 +120,13 @@ t::
 	SendInput, {ESC}
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 	return
 
 ;Build Silo
-r::
+$r::
     KeyWait, r
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -113,6 +144,7 @@ r::
 	SendInput, {ESC}
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 	return
 
 
