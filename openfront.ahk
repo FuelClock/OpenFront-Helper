@@ -5,12 +5,21 @@
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetKeyDelay, 25, 25
 SendMode, Event
-CoordMode, Mouse
+CoordMode, window
 
 Toggle := False
 #Include, functions.ahk
 return
 
+;10% Attack strength
+$1::
+	attack10()
+	return
+
+;20% Attack strength
+$2::
+	attack20()
+	return
 
 ;Build Menu
 Numpad1::
@@ -29,6 +38,7 @@ return
 
 ;Boat Menu
 q::
+	KeyWait, q
     MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
