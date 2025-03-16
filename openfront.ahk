@@ -55,6 +55,7 @@ return
 ;Boat Menu
 q::
 	KeyWait, q
+	BlockInput, mousemove
     MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -71,11 +72,13 @@ q::
 	SendInput, {ESC}
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 	return
 
 ;Build City
 c::
     KeyWait, c
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -93,11 +96,13 @@ c::
 	SendInput, {ESC}
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 	return
 
 ;Build Port
 t::
     KeyWait, t
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -115,11 +120,13 @@ t::
 	SendInput, {ESC}
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 	return
 
 ;Build Silo
 r::
     KeyWait, r
+	BlockInput, mousemove
 	MouseGetPos, mouseX, mouseY
 	ogmouseX := mouseX
 	ogmouseY := mouseY
@@ -137,6 +144,7 @@ r::
 	SendInput, {ESC}
 	;reset mouse to original position
 	MouseMove, ogmouseX, ogmouseY, 0
+	BlockInput, MouseMoveOff
 	return
 
 
