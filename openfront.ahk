@@ -38,113 +38,27 @@ $7::
 	return
 
 ;Build Menu
-Numpad1::
-    MouseGetPos, mouseX, mouseY
-	ogmouseX := mouseX
-	ogmouseY := mouseY
-	SendInput, {CTRL Down}
-	Sleep, 50
-	Click
-	Sleep, 50
-	Sendinput, {CTRL Up}
-	Sleep, 1000
-	mouseX := mouseX + 100
-	MouseMove, mouseX, mouseY
-return
+$Numpad1::
+    buildMenu()
+	return
 
-;Boat Menu
+;Boat Attack
 $q::
-	KeyWait, q
-	BlockInput, mousemove
-    MouseGetPos, mouseX, mouseY
-	ogmouseX := mouseX
-	ogmouseY := mouseY
-	SendInput, {RButton Down}
-	Sleep, 50
-	Sendinput, {Rbutton Up}
-	Sleep, 100
-	mouseX := mouseX + 75
-	MouseMove, mouseX, mouseY, 0
-
-	Sleep, 50
-	Click
-	Sleep, 50
-	SendInput, {ESC}
-	;reset mouse to original position
-	MouseMove, ogmouseX, ogmouseY, 0
-	BlockInput, MouseMoveOff
+	boatAttack()
 	return
 
 ;Build City
 $c::
-    KeyWait, c
-	BlockInput, mousemove
-	MouseGetPos, mouseX, mouseY
-	ogmouseX := mouseX
-	ogmouseY := mouseY
-	SendInput, {CTRL Down}
-	Sleep, 50
-	click	
-	Sleep, 50
-	Sendinput, {CTRL Up}
-	Sleep, 250
-	;Click buy city
-	MouseMove, 1020, 650, 0
-	sleep, 50
-	Click
-	Sleep, 50
-	SendInput, {ESC}
-	;reset mouse to original position
-	MouseMove, ogmouseX, ogmouseY, 0
-	BlockInput, MouseMoveOff
+	buildCity()
 	return
-
 ;Build Port
 $t::
-    KeyWait, t
-	BlockInput, mousemove
-	MouseGetPos, mouseX, mouseY
-	ogmouseX := mouseX
-	ogmouseY := mouseY
-	SendInput, {CTRL Down}
-	Sleep, 50
-	Click
-	Sleep, 50
-	Sendinput, {CTRL Up}
-	Sleep, 250
-	;Click buy port
-	MouseMove, 1160, 500, 0
-	sleep, 50
-	Click
-	Sleep, 50
-	SendInput, {ESC}
-	;reset mouse to original position
-	MouseMove, ogmouseX, ogmouseY, 0
-	BlockInput, MouseMoveOff
+	buildPort()
 	return
 
 ;Build Silo
 $r::
-    KeyWait, r
-	BlockInput, mousemove
-	MouseGetPos, mouseX, mouseY
-	ogmouseX := mouseX
-	ogmouseY := mouseY
-	SendInput, {CTRL Down}
-	Sleep, 50
-	Click
-	Sleep, 50
-	Sendinput, {CTRL Up}
-	Sleep, 250
-	;Click buy port
-	MouseMove, 1300, 510, 0
-	sleep, 50
-	Click
-	Sleep, 50
-	SendInput, {ESC}
-	;reset mouse to original position
-	MouseMove, ogmouseX, ogmouseY, 0
-	BlockInput, MouseMoveOff
+	buildSilo()
 	return
 
 
