@@ -21,6 +21,21 @@ $1::
 $2::
 	attack20()
 	return
+$3::
+	attack20()
+	return
+$4::
+	attack20()
+	return
+$5::
+	attack20()
+	return
+$6::
+	attack20()
+	return
+$7::
+	attack20()
+	return
 
 ;Build Menu
 Numpad1::
