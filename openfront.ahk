@@ -22,19 +22,19 @@ $2::
 	attack20()
 	return
 $3::
-	attack20()
+	attack30()
 	return
 $4::
-	attack20()
+	attack40()
 	return
 $5::
-	attack20()
+	attack50()
 	return
 $6::
-	attack20()
+	attack60()
 	return
 $7::
-	attack20()
+	attack70()
 	return
 
 ;Build Menu
