@@ -11,8 +11,6 @@ Toggle := False
 #Include, functions.ahk
 return
 
-/::suspend
-; Turns your autofire on or off
 
 ;Build Menu
 Numpad1::
