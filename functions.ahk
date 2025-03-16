@@ -5,9 +5,9 @@ random(min, target, max) {
 	return, weighted
 }
 
-rsleep(min, target, max) {
-	Random, lower, min, target
-	Random, upper, target, Max
+rsleep(minSleep, targetSleep, maxSleep) {
+	Random, lower, minSleep, targetSleep
+	Random, upper, targetSleep, MaxSleep
 	Random, weighted, lower, upper
 	sleep, %weighted%
 	return, weighted
