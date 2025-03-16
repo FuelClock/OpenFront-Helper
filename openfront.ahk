@@ -1,7 +1,16 @@
-#SingleInstance Force
-#MaxThreadsPerHotkey 2
+#SingleInstance, Force
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#MaxThreadsPerHotkey, 2
+
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+SetKeyDelay, 25, 25
+SendMode, Event
+CoordMode, Mouse
+
 Toggle := False
+#Include, functions.ahk
 return
+
 /::suspend
 ; Turns your autofire on or off
 
