@@ -1,3 +1,6 @@
+#Depricated
+This project is no longer maintained
+
 This is made to use with 1920 x 1080 display, using the firefox webbrowser on zoomlvl 100%
 # OpenFront Helper
  Helper App that adds hotkeys to use with OpenFront.io
